@@ -7,7 +7,7 @@
 
     <link rel="icon" href="../../favicon.ico">
     <title>iRehab--Login</title>
-    <link href="./iRehab_files/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/stylesheets/bootstrap.min.css" rel="stylesheet">
 	
 	<style>
 	
@@ -92,7 +92,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-		  <a class="navbar-brand" href="/"><img src="./iRehab_files/image/iRehab_logo.jpg" style="height:150%;"/></a>
+		  <a class="navbar-brand" href="/"><%= image_tag("iRehab_logo.jpg", :size=> "1600x1600") %></a>
           <!--<a class="navbar-brand" href="#">iRehab</a>-->
         </div>
         <div id="navbar" class="collapse navbar-collapse">
@@ -136,8 +136,8 @@
 	
 	
 
-    <script src="./iRehab_files/js/jquery-1.12.0.min.js"></script>
-    <script src="./iRehab_files/js/bootstrap.min.js"></script>
+    <script src="../../assets/javascripts/jquery-1.12.0.min.js"></script>
+    <script src="../../assets/javascripts/bootstrap.min.js"></script>
 
 	
 	
