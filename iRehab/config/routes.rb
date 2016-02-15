@@ -55,5 +55,6 @@ Rails.application.routes.draw do
   #   end
 root :to => 'irehab#index'
 match '/index', to: 'irehab#index', :via=> :get
-match '/login', to: 'irehab#login', :via=> :get 
+match '/login', to: 'irehab#login', :via=> :get
+match '/login', to: 'irehab#login', :via=> :post
 end
