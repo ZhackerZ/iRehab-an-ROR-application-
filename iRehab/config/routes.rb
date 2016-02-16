@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+  
+  #root             'home_pages#home'
+  get 'help'    => 'home_pages#help'
+  get 'about'   => 'home_pages#about'
+  get 'sign_up'  => 'users#new'
+  get 'log_in' => 'sessions#new'
+  post 'log_in' => 'sessions#create'
+  delete 'log_out' => 'sessions#destroy'
+  
+  
+  resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -55,6 +68,4 @@ Rails.application.routes.draw do
   #   end
 root :to => 'irehab#index'
 match '/index', to: 'irehab#index', :via=> :get
-match '/login', to: 'irehab#login', :via=> :get
-match '/login', to: 'irehab#login', :via=> :post
 end

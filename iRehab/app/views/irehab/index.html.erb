@@ -38,7 +38,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-			<li><a href="login.html">Sign in</a></li>
+			      <li><%= link_to "Sign in", log_in_path %></li>
             <li><a href="#About">About Us</a></li>
           </ul>
         </div>
@@ -63,7 +63,7 @@
             <div class="carousel-caption">
               <h1>Remote Medicare</h1>
               <p>Get direct and precise help when sitting at home</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              <p>New user? <%= link_to "Sign up now!", sign_up_path %></p>
             </div>
           </div>
         </div>
