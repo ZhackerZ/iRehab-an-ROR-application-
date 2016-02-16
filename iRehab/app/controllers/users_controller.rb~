@@ -13,7 +13,9 @@ class UsersController < ApplicationController
     # GET /users/1
     # GET /users/1.json
     def show
-	@user = User.find(params[:id])
+    #    @total_games = Stat.where(user_id: params[:id]).size
+    #    @games_won = Stat.where(user_id: params[:id], won: true).size
+    #    @games_lost = Stat.where(user_id: params[:id], won: false).size
     end
     
     # GET /users/new
