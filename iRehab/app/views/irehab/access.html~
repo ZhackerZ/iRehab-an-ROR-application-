@@ -158,8 +158,8 @@
 				  <div class="panel-body">
 					<ul>
 					  
-						<li>Your Email Address: <%= @user.email %></li>
-						<li>Your Phone Number: <%= @user.phone %></li>
+						<li>Your Email Address: <%= @email %></li>
+						<li>Your Phone Number: <%= @phone %></li>
 						<li>Your recent history</li>
 						<li>Your advisor: Stephen Page</li>
 						
