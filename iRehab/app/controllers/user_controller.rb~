@@ -1,0 +1,34 @@
+class UserController < ApplicationController
+  def confirm
+	@username = params[:username]
+	@password = params[:password]
+	@email = params[:email]
+	@year=params[:year]
+	@month=params[:month]
+	@day=params[:day]
+	@gender=params[:gender]
+	@addressline=params[:addressline]
+	@city=params[:city]
+	@state=params[:state]
+	@firstname=params[:firstname]
+	@lastname=params[:lastname]
+	@phone=params[:phone]
+	
+  end
+  def save	
+	@newuser= User.new
+	@newuser.username = params[:username]
+	@newuser.password = params[:password]
+	@newuser.email = params[:email]
+	@newuser.addressline=params[:addressline]
+	@newuser.city=params[:city]
+	@newuser.state=params[:state]
+	@newuser.firstname= params[:firstname]
+	@newuser.lastname= params[:lastname]
+	@newuser.gender=params[:gender]
+	@birthday=@month+'/'+@day+'/'+@year
+	@newuser.dateofbirth=params[:birthday]
+	@newuser.phone=params[:phone]
+	@newuser.save
+  end
+end

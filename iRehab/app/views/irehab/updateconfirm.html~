@@ -1,0 +1,29 @@
+<head>
+<link rel="stylesheet" type="text/css" href="index.css"/>
+</head>
+<body  class="small login">
+<div id="header">	
+	<p>Update Success!</p>
+	<p><%= @username %></p>
+</div>
+<div id="container">
+    <div id="content" >
+    	<div class="wrapper">
+<table class="login" style="margin-left: auto; margin-right: auto;">
+<tr><td>first name: <%=@firstname %></tr></td>
+<tr><td>last name: <%= @lastname %></tr></td>
+<tr><td>email: <%= @email %></tr></td>
+<tr><td>addressline: <%= @addressline %></tr></td>
+<tr><td>state: <%= @state %></tr></td>
+<tr><td>birth day: <%=@birthday></tr></td>
+<tr><td>gender: <%=@gender%></tr></td>
+<tr><td>phone: <%= @phone %></tr></td>
+</table>
+</div> <!-- wrapper -->
+	</div> <!-- content -->
+</div> <!-- container -->
+<%= link_to ('back'),
+{:action=>'access',
+:currentuser=>@username
+}%>
+</body>

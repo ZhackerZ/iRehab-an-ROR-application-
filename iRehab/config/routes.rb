@@ -1,17 +1,4 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-  
-  #root             'home_pages#home'
-  get 'help'    => 'home_pages#help'
-  get 'about'   => 'home_pages#about'
-  get 'sign_up'  => 'users#new'
-  get 'log_in' => 'sessions#new'
-  post 'log_in' => 'sessions#create'
-  delete 'log_out' => 'sessions#destroy'
-  
-  
-  resources :users
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -66,6 +53,15 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-root :to => 'irehab#index'
-match '/index', to: 'irehab#index', :via=> :get
+  root :to => 'irehab#index'
+  match '/index', to: 'irehab#index', :via=> :get
+  match '/access', to: 'irehab#access', :via=> :get
+  match '/accessIndex', to: 'irehab#accessIndex', :via=> :get
+  match '/registration', to: 'irehab#registration', :via=> :get
+  post 'irehab/registration'
+  patch 'irehab/updateconfirm'
+  match '/update', to: 'irehab#update', :via=> :get
+  match '/confirm', to: 'irehab#confirm', :via=>:get
+  match '/updateconfirm', to: 'irehab#updateconfirm', :via=>:get
+  match '/save', to: 'irehab#save', :via=>:get
 end
