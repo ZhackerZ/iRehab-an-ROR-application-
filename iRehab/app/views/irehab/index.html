@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Home--Gan Fang</title>
+    <title>Home: iRehab</title>
 
     
     <link href="../../assets/stylesheets/bootstrap.min.css" rel="stylesheet">
@@ -203,21 +203,48 @@
           <%= image_tag("webex_logo.jpeg",  :size=>"140x140") %>
           <h2>WebEx</h2>
           <p>WebEx is advanced multi-party video conference system.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-default" role="button" data-placement="bottom" data-toggle="popover" data-title="WebEx" data-container="body" type="button" data-html="true" href="#popover-content" id="login">View details &raquo;</a></p>
+					<div id="popover-content" class="hide">
+						<form class="form-inline" role="form">
+							<div class="form-group">
+								<p>WebEx lets you have online meetings with anyone who has an Internet connection – including mobile users. You will be connected via audio and you can share content from your computer which lets you see the same things at the same time – like PowerPoint files, Word documents or even browse the web together. Within the meeting, you can “Pass the Ball” so any attendee can control the meeting and share.</p>                             
+							</div>
+						</form>
+					</div>
         </div>
-		
+	
         <div class="col-lg-4">
-          <%= image_tag("calendar-icon.png",  :size=>"140x140") %> 
-          <h2>MyChart</h2>
+          <%= image_tag("calendar-icon.png",  :size=>"140x140") %>
+          <h2>Calendar</h2>
           <p> iRehab helps you to schedule an appointment with your doctor in the most convenient way.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          
+		  <p><a class="btn btn-default" role="button" data-placement="bottom" data-toggle="popover2" data-title="Calendar" data-container="body" type="button" data-html="true" href="#popover-content2" id="login">View details &raquo;</a></p>
+					<div id="popover-content2" class="hide">
+						<form class="form-inline" role="form">
+							<div class="form-group">
+								<p>With Google's free online calendar, it's easy to keep track of life's important events all in one place.</p>                             
+							</div>
+						</form>
+					</div>
+		  
+		  
+		  
+		  
         </div>
 		
         <div class="col-lg-4">
           <%= image_tag("support_group.png",  :size=>"140x140") %>
           <h2>Supporting Group</h2>
           <p>iRehab can link you to the most appropriate helper in the shortest time, enhance your opportunity to get help from professional teams.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          
+		  <p><a class="btn btn-default" role="button" data-placement="bottom" data-toggle="popover1" data-title="Support Group" data-container="body" type="button" data-html="true" href="#popover-content1" id="login">View details &raquo;</a></p>
+					<div id="popover-content1" class="hide">
+						<form class="form-inline" role="form">
+							<div class="form-group">
+								<p>Our experts teams are always ready to help you with any conditions and requests. </p>                             
+							</div>
+						</form>
+					</div>
         </div>
 		
       </div>

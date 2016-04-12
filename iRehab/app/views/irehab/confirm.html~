@@ -1,26 +1,131 @@
 <head>
-<link rel="stylesheet" type="text/css" href="index.css"/>
-</head>
-<body  class="small login">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="../../favicon.ico">
+    <title>iRehab--Login</title>
+    <link href="../../assets/stylesheets/bootstrap.min.css" rel="stylesheet">
+	
+	<style>
+	
+	body {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		background-color: #eee;
+	}
+
+	.form-signin {
+		max-width: 330px;
+		padding: 15px;
+		margin: 0 auto;
+	}
+	
+	.form-signin .form-signin-heading,
+	.form-signin .checkbox {
+		margin-bottom: 10px;
+	}
+
+	.form-signin .checkbox {
+		font-weight: normal;
+	}
+	
+	.form-signin .form-control {
+		position: relative;
+		height: auto;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 10px;
+		font-size: 16px;
+	}
+	
+	.form-signin .form-control:focus {
+		z-index: 2;
+	}
+	
+	.form-signin input[type="email"] {
+		margin-bottom: -1px;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+	
+	.form-signin input[type="password"] {
+	  margin-bottom: 10px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+	
+	footer {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 100px;
+		width: 100%;
+		overflow:hidden;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+	
+
+	</style>
+	
+	
+	
+	
+	
+  </head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	
+      <div class="container">
+	  
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  <a class="navbar-brand" href="/"><%= image_tag("iRehab_logo.jpg", :size=>"75x30") %></a>
+          <!--<a class="navbar-brand" href="#">iRehab</a>-->
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><%= link_to ('Home'),{:action=>'accessIndex',:currentuser=>@currentuser}%></li>
+            <li><a href="#About">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+	  
+    </nav>
+
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 <div id="header">	
-	<p>Comfirm Page</p>
+	
 </div>
 <div id="container">
     <div id="content" >
     	<div class="wrapper">
-<table class="login" style="margin-left: auto; margin-right: auto;"><font size="5">
+<table class="login" style="margin-left: auto; margin-right: auto;"><font size="15">
+<tr><td><p>Comfirm Page</p></tr></td>
 <tr><td>username: <%= @username %></tr></td>
 <% @password %>
 <tr><td>firstname: <%=@firstname %></tr></td>
 <tr><td>lastname: <%=@lastname %></tr></td>
 <tr><td>birth day: <%=@month%>/<%=@day%>/<%=@year%></tr></td>
-<% @birthday='1/1/2016' %>
 <tr><td>gender: <%=@gender%></tr></td>
 <tr><td>email: <%= @email %></tr></td>
 <tr><td>addressline: <%= @addressline %></tr></td>
 <tr><td>city: <%= @city %></tr></td>
 <tr><td>state: <%= @state %></tr></td>
-<tr><td>state: <%= @phone %></tr></td>
+<tr><td>phone: <%= @phone %></tr></td>
+
 <tr><td>
 <% users = User.where(:username => @username).first %>
 <% if users %>
@@ -29,7 +134,7 @@
 </font>
 <% else %>
 <%=link_to ('Save'), {
-:controller=> 'user',
+:controller=> 'irehab',
 :action=> 'save',
 :username=> @username,
 :firstname=>@firstname,
@@ -41,13 +146,13 @@
 :city=> @city,
 :state => @state,
 :phone => @phone
- }%>
+ },class: "tn btn-lg btn-primary"%>
 <% end %>
-</tr></td>
-<tr><td>
-<input type="button" value="Cancel" onClick="window.location.href='registration.html';">
-</tr></td>
-</font>
+</td></div>
+<div class="div-inline"><tr><td>
+<input type="button" value="Cancel" onClick="window.location.href='registration.html';" class="tn btn-lg btn-primary"/>
+</td></tr>
+
 </table>
 		</div> <!-- wrapper -->
 	</div> <!-- content -->

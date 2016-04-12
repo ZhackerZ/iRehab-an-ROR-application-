@@ -118,47 +118,51 @@
     <div class="container">
 
       <form class="form-signin" action = "confirm" onsubmit="return textCheck()">
-        <h2 class="form-signin-heading" style="margin-bottom: 10px">Sign up</h2>
+	  <h2 class="form-signin-heading" style="margin-bottom: 10px;">Sign up</h2>
+        
 		<br>
         
-        <input name="username" type="text" id="username" value="" class="form-control" placeholder="Username*" style="margin-bottom: 10px" required autofocus>
-		
+		<div id = "infoblock2">
+		<h4 style="margin-bottom: 10px">Account Information</h4>
+		<input name="username" type="text" id="username" value="" class="form-control" placeholder="Username*" style="margin-bottom: 10px" required autofocus>
+		<input class="form-control" name="email" type="email" placeholder="Email*" value="" size="24" maxlength="32" style="margin-bottom: 10px;" required>	
 		<input id="password" name="password" type="password" placeholder="Password*" value="" size="24" maxlength="32"  class="form-control" style="margin-bottom: 10px" required>
-		<input id="password2" name="password2" type="password" placeholder="Enter password again*"  size="24" value="" maxlength="32"  class="form-control" style="margin-bottom: 10px" required>
-		<input name="firstname" type="text" placeholder="FirstName" value="" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
-		<input name="lastname" type="text" placeholder="LastName" value="" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
+		<input id="password2" name="password2" type="password" placeholder="Enter password again*"  size="24" value="" maxlength="32"  class="form-control" style="margin-bottom: 10px" required></div>
 		
-		<div>
-			<div class="col-xs-5 selectContainer">
-				<select class="form-control" name="gender">
-					<option value="M">Male</option>
-					<option value="F">Female</option>
-				</select>
-			</div>
+		
+		<div id = "infoblock2">
+			<h4 style="margin-bottom: 10px">Personal Information</h4>
+			<input name="firstname" type="text" placeholder="FirstName" value="" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
+			<input name="lastname" type="text" placeholder="LastName" value="" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
+		
+				
+				
+				<class="col-xs-5 selectContainer">
+					<select class="form-control" name="gender">
+						<option value="M">Male</option>
+						<option value="F">Female</option>
+					</select>
+				
+				
+					Birthday:
+				<select id="selYear" name="year" value="1"></select>
+				<select id="selMonth" name="month" value="2"></select>
+				<select id="selDay" name="day" value="3"></select>
+				<script type="text/javascript">
+					var selYear = window.document.getElementById("selYear");
+					var selMonth = window.document.getElementById("selMonth");
+					var selDay = window.document.getElementById("selDay");
+					new DateSelector(selYear, selMonth ,selDay);
+				</script>
+				
 			
-			<div>
-				Birthday:
-			<select id="selYear" name="year" value="1"></select>
-			<select id="selMonth" name="month" value="2"></select>
-			<select id="selDay" name="day" value="3"></select>
-			<script type="text/javascript">
-				var selYear = window.document.getElementById("selYear");
-				var selMonth = window.document.getElementById("selMonth");
-				var selDay = window.document.getElementById("selDay");
-				new DateSelector(selYear, selMonth ,selDay);
-			</script>
-			</div>
+			
+			
+			<input name="addressline" type="text" placeholder="addressline" value="" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px; margin-top:40px;" required>
+			<input name="city" type="text" placeholder="city" value="" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
+			<input name="state" type="text" placeholder="state" value="" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
+			<input name="phone" type="text" placeholder="phone" value="" size="24" maxlength="32" class="form-control" style="margin-bottom: 20px" required>
 		</div>
-		
-		
-		
-
-		<input class="form-control" name="email" type="email" placeholder="Email*" value="" size="24" maxlength="32" style="margin-bottom: 10px" required>
-		<input name="AddressLine" type="text" placeholder="AddressLine" value="" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
-		<input name="city" type="text" placeholder="city" value="" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
-		<input name="state" type="text" placeholder="state" value="" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
-		<input name="phone" type="text" placeholder="phone" value="" size="24" maxlength="32" class="form-control" style="margin-bottom: 20px" required>
-		
 		
 		
 		<div class="div-inline">
