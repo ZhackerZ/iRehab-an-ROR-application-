@@ -92,7 +92,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to ('Home'),{:action=>'accessIndex',:currentuser=>@currentuser}%></li>
+            <li><a href="index.html">Home</a></li>
+			<li class="active"><a href="#">Sign in</a></li>
             <li><a href="#About">About Us</a></li>
           </ul>
         </div>
@@ -143,6 +144,7 @@
 :birthday=>@birthday,
 :password=> @password,
 :email=> @email,
+:addressline=>addressline,
 :city=> @city,
 :state => @state,
 :phone => @phone
