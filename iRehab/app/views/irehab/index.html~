@@ -212,7 +212,7 @@
 						</form>
 					</div>
         </div>
-		> 
+	
         <div class="col-lg-4">
           <%= image_tag("calendar-icon.png",  :size=>"140x140") %>
           <h2>Calendar</h2>

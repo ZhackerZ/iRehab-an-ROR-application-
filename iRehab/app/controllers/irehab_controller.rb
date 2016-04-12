@@ -13,9 +13,10 @@ class IrehabController < ApplicationController
   def access
 	@currentuser=params[:currentuser]
   end
-  def accessIndex
-	@currentuser=params[:currentuser]
+
+  def changepassword 
   end
+
   def update
   end
   def confirm

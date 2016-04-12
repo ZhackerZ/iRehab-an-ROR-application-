@@ -56,7 +56,7 @@ Rails.application.routes.draw do
   root :to => 'irehab#index'
   match '/index', to: 'irehab#index', :via=> :get
   match '/access', to: 'irehab#access', :via=> :get
-  match '/accessIndex', to: 'irehab#accessIndex', :via=> :get
+  match '/changepassword', to: 'irehab#changepassword', :via=> :get
   match '/registration', to: 'irehab#registration', :via=> :get
   post 'irehab/registration'
   patch 'irehab/updateconfirm'

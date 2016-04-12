@@ -155,7 +155,7 @@
 	</tr>
 
 	<input class="form-control" name="email" type="email" placeholder="Email*" value="<%=@updateuser.email%>" size="24" maxlength="32" style="margin-bottom: 10px; margin-top: 40px;" required>
-	<input name="AddressLine" type="text" placeholder="AddressLine" value="<%=@updateuser.addressline%>" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
+	<input name="addressline" type="text" placeholder="addressline" value="<%=@updateuser.addressline%>" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
 	<input name="city" type="text" placeholder="city" value="<%=@updateuser.city%>" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
 	<input name="state" type="text" placeholder="state" value="<%=@updateuser.state%>" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
 	<input name="phone" type="text" placeholder="phone" value="<%=@updateuser.phone%>" size="24" maxlength="32" class="form-control" style="margin-bottom: 20px" required>
