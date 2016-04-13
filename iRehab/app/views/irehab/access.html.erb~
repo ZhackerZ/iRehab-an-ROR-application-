@@ -285,7 +285,7 @@
 				  </div>
 				  <div id="collapse5" class="panel-collapse collapse">
 					<ul class="list-group">
-					  <li class="list-group-item">One</li>
+					  <li class="list-group-item"><%=instant_hangout=></li>
 					  <li class="list-group-item">Two</li>
 					  <li class="list-group-item">Three</li>
 					</ul>

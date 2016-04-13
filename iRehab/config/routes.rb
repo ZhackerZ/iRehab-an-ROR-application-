@@ -63,5 +63,6 @@ Rails.application.routes.draw do
   match '/update', to: 'irehab#update', :via=> :get
   match '/confirm', to: 'irehab#confirm', :via=>:get
   match '/updateconfirm', to: 'irehab#updateconfirm', :via=>:get
+  patch 'irehab/changepassword'
   match '/save', to: 'irehab#save', :via=>:get
 end
