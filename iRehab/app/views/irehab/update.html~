@@ -111,8 +111,6 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to ('Home'),{:action=>'accessIndex',:currentuser=>@currentuser}%></li>
-            <li><a href="#About">About Us</a></li>
           </ul>
         </div>
       </div>

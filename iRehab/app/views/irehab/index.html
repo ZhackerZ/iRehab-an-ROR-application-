@@ -236,7 +236,9 @@
           <%= image_tag("support_group.png",  :size=>"140x140") %>
           <h2>Supporting Group</h2>
           <p>iRehab can link you to the most appropriate helper in the shortest time, enhance your opportunity to get help from professional teams.</p>
-          
+	<!-- modify -->
+       <%= link_to('Popover test', '#popover-content1', :class => "popover-test", :rel => "popover", :title => "This is a test", :"data-content" => "<b>hello popover world</b>") %>
+	
 		  <p><a class="btn btn-default" role="button" data-placement="bottom" data-toggle="popover1" data-title="Support Group" data-container="body" type="button" data-html="true" href="#popover-content1" id="login">View details &raquo;</a></p>
 					<div id="popover-content1" class="hide">
 						<form class="form-inline" role="form">
@@ -245,7 +247,8 @@
 							</div>
 						</form>
 					</div>
-        </div>
+	        
+	</div>
 		
       </div>
 		  
@@ -259,7 +262,7 @@
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
           
 
-      <form class="form-signin">
+      <form class="form-signin" action="findUser">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Username</label>
         <input  name="user" type="text" id="inputEmail" class="form-control" placeholder="User Name" required autofocus>

@@ -54,11 +54,13 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   root :to => 'irehab#index'
-  match '/index', to: 'irehab#index', :via=> :get
+  match '/index', to:'irehab#index', :via=> :get
+  match '/findUser', to:'irehab#findUser', :via=> :get
   match '/access', to: 'irehab#access', :via=> :get
   match '/changepassword', to: 'irehab#changepassword', :via=> :get
   match '/registration', to: 'irehab#registration', :via=> :get
   post 'irehab/registration'
+  post 'irehab/index'
   patch 'irehab/updateconfirm'
   match '/update', to: 'irehab#update', :via=> :get
   match '/confirm', to: 'irehab#confirm', :via=>:get

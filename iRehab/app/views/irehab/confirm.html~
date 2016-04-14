@@ -125,6 +125,7 @@
 <tr><td>addressline: <%= @addressline %></tr></td>
 <tr><td>city: <%= @city %></tr></td>
 <tr><td>state: <%= @state %></tr></td>
+<tr><td>zipcode: <%= @zipcode %></tr></td>
 <tr><td>phone: <%= @phone %></tr></td>
 
 <tr><td>
@@ -144,7 +145,7 @@
 :birthday=>@birthday,
 :password=> @password,
 :email=> @email,
-:addressline=>addressline,
+:addressline=>@addressline,
 :city=> @city,
 :state => @state,
 :phone => @phone

@@ -1,5 +1,9 @@
 class IrehabController < ApplicationController
   def index
+  
+  end
+
+  def findUser
     @currentuser=params[:user]
     log=User.where(:username => params[:user],:password => params[:pass]).first
     if log && params[:user]
@@ -7,8 +11,10 @@ class IrehabController < ApplicationController
 	redirect_to(:action=>"access", :currentuser => params[:user]);
     else
 	flash[:notice]= "The login or password is not correct"
+	render 'index'
     end
   end
+
 
   def access
 	@currentuser=params[:currentuser]
@@ -28,6 +34,7 @@ class IrehabController < ApplicationController
 	@addressline=params[:addressline]
 	@city=params[:city]
 	@state=params[:state]
+	@zipcode=params[:zipcode]
 	@firstname=params[:firstname]
 	@lastname=params[:lastname]
 	@phone=params[:phone]
@@ -43,6 +50,7 @@ class IrehabController < ApplicationController
 	@addressline=params[:addressline]
 	@city=params[:city]
 	@state=params[:state]
+	@zipcode=params[:zipcode]
 	@firstname=params[:firstname]
 	@lastname=params[:lastname]
 	@phone=params[:phone]
@@ -55,6 +63,7 @@ class IrehabController < ApplicationController
 	@user.gender=params[:gender]
 	@user.dateofbirth=params[:birthday]
 	@user.phone=params[:phone]
+	@user.zipcode=params[:zipcode]
 	@user.save
   end
   def save	
@@ -70,6 +79,7 @@ class IrehabController < ApplicationController
 	@newuser.gender=params[:gender]
 	@newuser.dateofbirth=params[:birthday]
 	@newuser.phone=params[:phone]
+	@newuser.zipcode=params[:zipcode]
 	@newuser.save
   end
 

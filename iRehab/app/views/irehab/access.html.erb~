@@ -1,11 +1,5 @@
-<% users=User.all %>
-<% users.each do |user| %>
-<% if user.username== @currentuser %>
-<% @id=user.id %>
-<% @record=user %>
-<% end %>
-<% end %>
-
+<% @record=User.find_by(username: @currentuser)%>
+<% @id=@record.id %>
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -116,7 +110,7 @@
 		
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            >
+            
 
             
           </ul>
@@ -285,7 +279,7 @@
 				  </div>
 				  <div id="collapse5" class="panel-collapse collapse">
 					<ul class="list-group">
-					  <li class="list-group-item"><%=instant_hangout=></li>
+					  <li class="list-group-item"><%=instant_hangout%></li>
 					  <li class="list-group-item">Two</li>
 					  <li class="list-group-item">Three</li>
 					</ul>

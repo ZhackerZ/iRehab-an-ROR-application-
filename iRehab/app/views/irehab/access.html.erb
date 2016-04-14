@@ -1,11 +1,5 @@
-<% users=User.all %>
-<% users.each do |user| %>
-<% if user.username== @currentuser %>
-<% @id=user.id %>
-<% @record=user %>
-<% end %>
-<% end %>
-
+<% @record=User.find_by(username: @currentuser)%>
+<% @id=@record.id %>
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -116,7 +110,7 @@
 		
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            >
+            
 
             
           </ul>
@@ -176,7 +170,7 @@
 				<p>lastname: <%=@record.lastname %></p>
 				<p>birthday: <%=@record.dateofbirth %></p>
 				<p>gender: <%=@record.gender%></p>
-				<p>address:<%= @record.addressline %>,<%= @record.city %>,<%= @record.state %></p>
+				<p>address:<%= @record.addressline %>,<%= @record.city %>,<%= @record.state %>,<%= @record.zipcode%></p>
 				<p>phone: <%= @record.phone %></p>
 			</h3>
             

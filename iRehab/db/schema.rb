@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150412195730) do
+ActiveRecord::Schema.define(version: 20160414190644) do
 
   create_table "users", force: :cascade do |t|
     t.string   "username",    limit: 10,               null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20150412195730) do
     t.string   "addressline",            default: ""
     t.string   "city",                   default: ""
     t.string   "state",                  default: ""
-    t.string   "country",                default: ""
+    t.string   "zipcode",                default: ""
     t.string   "firstname",                            null: false
     t.string   "lastname",                             null: false
     t.string   "dateofbirth"
