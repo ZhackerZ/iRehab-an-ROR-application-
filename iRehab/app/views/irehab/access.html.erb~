@@ -158,11 +158,7 @@
           <div class="jumbotron">
             <h1>Hello, <%= @currentuser %>!</h1>
             <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
-          </div>
-		  
-
-		  
-          <div>
+		<div>
 		  
             <h3>
 				<p>Personal Information</p>
@@ -170,13 +166,18 @@
 				<p>lastname: <%=@record.lastname %></p>
 				<p>birthday: <%=@record.dateofbirth %></p>
 				<p>gender: <%=@record.gender%></p>
-				<p>address:<%= @record.addressline %>,<%= @record.city %>,<%= @record.state %></p>
+				<p>address:<%= @record.addressline %>,<%= @record.city %>,<%= @record.state %>,<%= @record.zipcode%></p>
 				<p>phone: <%= @record.phone %></p>
 			</h3>
             
             
             
           </div><!--/row-->
+          </div>
+		  
+
+		  
+          
 		  
 		  
 		  
