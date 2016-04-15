@@ -148,6 +148,7 @@
 :addressline=>@addressline,
 :city=> @city,
 :state => @state,
+:zipcode=>@zipcode,
 :phone => @phone
  },class: "tn btn-lg btn-primary"%>
 <% end %>

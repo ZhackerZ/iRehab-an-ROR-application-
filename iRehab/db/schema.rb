@@ -11,7 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160414190644) do
+ActiveRecord::Schema.define(version: 20160414214030) do
+
+  create_table "faq", force: :cascade do |t|
+    t.string "question", limit: 1000
+    t.string "answer",   limit: 1000
+  end
+
+  create_table "forum", force: :cascade do |t|
+    t.string   "username",      limit: 10,   null: false
+    t.string   "doctor",        limit: 10
+    t.string   "user_question", limit: 1000, null: false
+    t.string   "doc_answer",    limit: 1000
+    t.datetime "question_time"
+    t.datetime "answer_time"
+  end
+
+  create_table "record", force: :cascade do |t|
+    t.string "username",         limit: 10,   null: false
+    t.string "appointment_date",              null: false
+    t.string "appointment_time",              null: false
+    t.string "advisor",          limit: 20,   null: false
+    t.string "description",      limit: 1000
+    t.string "instruction",      limit: 1000
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username",    limit: 10,               null: false

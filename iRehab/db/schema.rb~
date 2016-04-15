@@ -11,23 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150412201346) do
+ActiveRecord::Schema.define(version: 20160414190644) do
 
   create_table "users", force: :cascade do |t|
-    t.string   "username",    limit: 10,                               null: false
-    t.string   "password",    limit: 20,                               null: false
-    t.string   "email",       limit: 255, default: ""
-    t.string   "gender",      limit: 255, default: "M"
-    t.string   "addressline", limit: 255, default: ""
-    t.string   "city", limit: 255, default: ""
-    t.string   "state", limit: 255, default: ""
-    t.string   "country", limit: 255, default: ""
-    t.string   "firstname",    limit: 255
-    t.string   "lastname",    limit: 255
-    t.string   "dateofbirth", limit: 255
-    t.string   "phone", limit: 20
+    t.string   "username",    limit: 10,               null: false
+    t.string   "password",    limit: 20,               null: false
+    t.string   "email",                                null: false
+    t.string   "gender",                 default: "M"
+    t.string   "addressline",            default: ""
+    t.string   "city",                   default: ""
+    t.string   "state",                  default: ""
+    t.string   "zipcode",                default: ""
+    t.string   "firstname",                            null: false
+    t.string   "lastname",                             null: false
+    t.string   "dateofbirth"
+    t.string   "phone",       limit: 20
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+  
+  create_table "forum", force: :cascade do |f|
+	f.string "username", limit: 10, null: false
+	f.string "doctor", limit: 10
+	
+	f.string "user_question", limit: 1000, null: false
+	f.string "doc_answer", limit: 1000
+	f.datetime "question_time"
+	f.datetime "answer_time"
+  end
 
+  create_table "faq", force: :cascade do |q|
+	q.string "question", limit: 1000
+	q.string "answer", limit: 1000
+  end
+
+  create_table "record", force: :cascade do |r|
+	r.string "username", limit: 10, null: false
+	r.string "appointment_date", null: false
+	r.string "appointment_time", null: false
+	r.string "advisor", limit: 20, null: false
+	r.string "description", limit: 1000
+	r.string "instruction", limit: 1000 
+  end
 end
