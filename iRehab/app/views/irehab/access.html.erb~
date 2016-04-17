@@ -157,28 +157,70 @@
 		  
           <div class="jumbotron">
             <h1>Hello, <%= @currentuser %>!</h1>
-            
-		<div>
-		  
-            <h3>
-				<p>Personal Information</p>
-				<p>firstname: <%=@record.firstname %></p>
-				<p>lastname: <%=@record.lastname %></p>
-				<p>birthday: <%=@record.dateofbirth %></p>
-				<p>gender: <%=@record.gender%></p>
-				<p>address:<%= @record.addressline %>,<%= @record.city %>,<%= @record.state %>,<%= @record.zipcode%></p>
-				<p>phone: <%= @record.phone %></p>
-			</h3>
-            
-            
-            
-          </div><!--/row-->
+         
           </div>
 		  
 
 		  
           
+		   <div>
 		  
+            <div class="panel-group" id="accordion">
+			  <div class="panel panel-default">
+				<div class="panel-heading">
+				  <h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion" 
+					  href="#collapseOne">
+					  Personal Information
+					</a>
+				  </h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse">
+				  <div class="panel-body">
+					<ul>
+					  
+						<li>firstname: <%=@record.firstname %></li>
+						<li>lastname: <%=@record.lastname %></li>
+						<li>birthday: <%=@record.dateofbirth %></li>
+						<li>gender: <%=@record.gender%></li>
+						<li>address:<%= @record.addressline %>,<%= @record.city %>,<%= @record.state %>,<%= @record.zipcode%></li>
+						<li>phone: <%= @record.phone %></li>
+						
+					 </ul>
+				  </div>
+				</div>
+			  </div>
+			  </div>
+			  
+			  <div class="panel-group" id="accordion">
+			  <div class="panel panel-default">
+				<div class="panel-heading">
+				  <h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion" 
+					  href="#collapseTwo">
+					  Care Record
+					</a>
+				  </h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse">
+				  <div class="panel-body">
+					<ul>
+					  
+						<li>Appointment Date: 04/14/2016</li>
+						<li>Appointment Time: 16:50</li>
+						<li>Advisor: Stephen Page</li>
+						<li>Description: Good.</li>
+						<li>Further Instruction: Go on.</li>
+						
+					 </ul>
+				  </div>
+				</div>
+			  </div>
+			  </div>
+            
+            
+            
+          </div><!--/row-->
 		  
 		  
 		  
@@ -199,7 +241,7 @@
 					</h4></div></div>
 				  </div>
 				  <div id="collapse1" class="panel-collapse collapse">
-					<iframe src="https://calendar.google.com/calendar/embed?src=irehabosu%40gmail.com&ctz=America/New_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+					<iframe src="https://calendar.google.com/calendar/embed?src=irehabosu%40gmail.com&ctz=America/New_York" style="border: 0" width=100% height="600" frameborder="0" scrolling="no"></iframe>
 					<div class="panel-footer"></div>
 				  </div>
 				</div>
