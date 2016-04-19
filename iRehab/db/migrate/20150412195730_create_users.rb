@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration
 	t.string "addressline", :default=>""
 	t.string "city", :default=>""
 	t.string "state", :default=>""
-	t.string "country", :default=>""
+	t.string "zipcode", :default=>""
 	t.string "firstname", :null=>false
 	t.string "lastname", :null=>false
 	t.string "dateofbirth"

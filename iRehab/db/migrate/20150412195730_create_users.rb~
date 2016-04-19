@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration
 	t.string "email", :null=>false
 	t.string "gender", :default=>"M"
 	t.string "addressline", :default=>""
+	t.string "city", :default=>""
 	t.string "state", :default=>""
 	t.string "country", :default=>""
 	t.string "firstname", :null=>false

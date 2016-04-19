@@ -1,6 +1,6 @@
-class Record < ActiveRecord::Migration
+class CreateRecords < ActiveRecord::Migration
   def up
-  create_table "record", force: :cascade do |r|
+  create_table :records, force: :cascade do |r|
 	r.string "username", limit: 10, null: false
 	r.string "appointment_date", null: false
 	r.string "appointment_time", null: false

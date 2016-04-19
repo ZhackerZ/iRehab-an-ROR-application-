@@ -156,6 +156,7 @@
 	<input name="addressline" type="text" placeholder="addressline" value="<%=@updateuser.addressline%>" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
 	<input name="city" type="text" placeholder="city" value="<%=@updateuser.city%>" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
 	<input name="state" type="text" placeholder="state" value="<%=@updateuser.state%>" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
+	<input name="zipcode" type="text" placeholder="zipcode" value="<%=@updateuser.zipcode%>" size="24" maxlength="32" class="form-control" style="margin-bottom: 10px" required>
 	<input name="phone" type="text" placeholder="phone" value="<%=@updateuser.phone%>" size="24" maxlength="32" class="form-control" style="margin-bottom: 20px" required>
 		
 		

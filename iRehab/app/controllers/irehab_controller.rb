@@ -83,4 +83,13 @@ class IrehabController < ApplicationController
 	@newuser.save
   end
 
+  def help
+  end
+
+  def helpconfrim
+	#@newquestion=Faq.new
+	#@newquestion.question=@questionparams[:question]
+	#@newquestion.anwser=""
+	#@newquestion.save
+  end
 end

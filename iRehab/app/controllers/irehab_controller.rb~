@@ -8,7 +8,7 @@ class IrehabController < ApplicationController
     log=User.where(:username => params[:user],:password => params[:pass]).first
     if log && params[:user]
 	flash[:notice]="Welcome Back"
-	#redirect_to(:action=>"access", :currentuser => params[:user]);
+	redirect_to(:action=>"access", :currentuser => params[:user]);
     else
 	flash[:notice]= "The login or password is not correct"
 	render 'index'
@@ -83,4 +83,14 @@ class IrehabController < ApplicationController
 	@newuser.save
   end
 
+  def help
+  end
+
+  def helpconfrim
+	@question="asdf"
+	#@newquestion=Faq.new
+	#@newquestion.question=@questionparams[:question]
+	#@newquestion.anwser=""
+	#@newquestion.save
+  end
 end

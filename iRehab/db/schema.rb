@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160414214030) do
+ActiveRecord::Schema.define(version: 20160418204724) do
 
-  create_table "faq", force: :cascade do |t|
+  create_table "faqs", force: :cascade do |t|
     t.string "question", limit: 1000
     t.string "answer",   limit: 1000
   end
 
-  create_table "forum", force: :cascade do |t|
+  create_table "forums", force: :cascade do |t|
     t.string   "username",      limit: 10,   null: false
     t.string   "doctor",        limit: 10
     t.string   "user_question", limit: 1000, null: false
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160414214030) do
     t.datetime "answer_time"
   end
 
-  create_table "record", force: :cascade do |t|
+  create_table "records", force: :cascade do |t|
     t.string "username",         limit: 10,   null: false
     t.string "appointment_date",              null: false
     t.string "appointment_time",              null: false

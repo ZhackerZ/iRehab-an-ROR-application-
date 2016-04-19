@@ -1,11 +1,11 @@
-class Faq < ActiveRecord::Migration
+class CreateFaqs < ActiveRecord::Migration
   def up
-  create_table "faq", force: :cascade do |q|
+  create_table :faqs, force: :cascade do |q|
 	q.string "question", limit: 1000
 	q.string "answer", limit: 1000
   end
   end
   def down
-	drop_table :faq
+	drop_table :faqs
   end
 end

@@ -1,4 +1,4 @@
-class Forum < ActiveRecord::Migration
+class CreateForums < ActiveRecord::Migration
   def up
   create_table "forum", force: :cascade do |f|
 	f.string "username", limit: 10, null: false
