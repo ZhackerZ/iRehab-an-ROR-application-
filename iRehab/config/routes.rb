@@ -65,11 +65,11 @@ Rails.application.routes.draw do
   match '/save', to: 'irehab#save', :via=>:get
   match '/help', to: 'irehab#help', :via=>:get
   match '/helpconfirm', to: 'irehab#helpconfirm', :via=>:get
+  match '/changepasswordconfirm', to: 'irehab#changepasswordconfirm', :via=>:get
   post 'irehab/registration'
   post 'irehab/index'
   post 'irehab/help'
   patch 'irehab/updateconfirm'
-
   patch 'irehab/changepassword'
 
   

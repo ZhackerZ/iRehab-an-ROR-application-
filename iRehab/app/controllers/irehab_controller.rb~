@@ -87,10 +87,8 @@ class IrehabController < ApplicationController
   end
 
   def helpconfrim
-	@question="asdf"
-	#@newquestion=Faq.new
-	#@newquestion.question=@questionparams[:question]
-	#@newquestion.anwser=""
-	#@newquestion.save
+	
+  end
+  def changepasswordconfirm
   end
 end
