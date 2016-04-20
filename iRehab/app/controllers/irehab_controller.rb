@@ -61,7 +61,7 @@ class IrehabController < ApplicationController
 	@user.firstname= params[:firstname]
 	@user.lastname= params[:lastname]
 	@user.gender=params[:gender]
-	@user.dateofbirth=params[:birthday]
+	@user.dateofbirth=@birthday
 	@user.phone=params[:phone]
 	@user.zipcode=params[:zipcode]
 	@user.save

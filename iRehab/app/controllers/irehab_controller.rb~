@@ -90,5 +90,6 @@ class IrehabController < ApplicationController
 	
   end
   def changepasswordconfirm
+	@id=params[:id]
   end
 end
