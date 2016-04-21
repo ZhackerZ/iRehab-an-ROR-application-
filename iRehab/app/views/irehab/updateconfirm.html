@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" href="../../favicon.ico">
-    <title>iRehab--Login</title>
+    <title>iRehab--Update</title>
     <link href="../../assets/stylesheets/bootstrap.min.css" rel="stylesheet">
 	
 	<style>
@@ -113,16 +113,16 @@
 <table class="login" style="margin-left: auto; margin-right: auto;">
 <tr><td><p>Update Success!</p></td></tr>
 <tr><td><p><%= @username %></p></td></tr>
-<tr><td>first name: <%=@firstname %></tr></td>
-<tr><td>last name: <%= @lastname %></tr></td>
-<tr><td>email: <%= @email %></tr></td>
-<tr><td>addressline: <%= @addressline %></tr></td>
-<tr><td>city: <%= @city %></tr></td>
-<tr><td>state: <%= @state %></tr></td>
-<tr><td>birth day: <%=@birthday %></tr></td>
-<tr><td>gender: <%=@gender%></tr></td>
-<tr><td>phone: <%= @phone %></tr></td>
-<tr><td>zipcode: <%= @zipcode %></tr></td>
+<tr><td>First Name: <%=@firstname %></tr></td>
+<tr><td>Last Name: <%= @lastname %></tr></td>
+<tr><td>Email: <%= @email %></tr></td>
+<tr><td>Address: <%= @addressline %></tr></td>
+<tr><td>City: <%= @city %></tr></td>
+<tr><td>State: <%= @state %></tr></td>
+<tr><td>Date of Birth: <%=@birthday %></tr></td>
+<tr><td>Gender: <%=@gender%></tr></td>
+<tr><td>Phone Number: <%= @phone %></tr></td>
+<tr><td>Zipcode: <%= @zipcode %></tr></td>
 <tr><td><%= link_to ('back'),
 {:action=>'access',
 :currentuser=>@username
