@@ -70,7 +70,6 @@ Rails.application.routes.draw do
   post 'irehab/index'
   post 'irehab/help'
   patch 'irehab/updateconfirm'
-
   patch 'irehab/changepassword'
 
   

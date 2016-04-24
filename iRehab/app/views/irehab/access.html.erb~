@@ -90,6 +90,14 @@
 		#but {
 			margin-left: 80px;
 		}
+
+		#bot{
+			background-color: #81D3FF;
+			height: 150px;
+			padding: 20px;
+			padding-right:50px;
+			padding-left:100px;
+		}
 	
 	</style>
   </head>
@@ -105,7 +113,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><%= image_tag("iRehab_logo.jpg", :size=>"75x30") %></a>
+          <a class="navbar-brand" href="#"><%= image_tag("iRehab_logo.jpg", :size=>"75x30") %></a>
         </div>
 		
         <div id="navbar" class="navbar-collapse collapse">
@@ -117,18 +125,8 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="active">
 			
-			<!-- Popover added 2016.3.29 by Gan Fang, be aware of 'data-title' -->
-			<a data-placement="bottom" data-toggle="popover" data-title="<%=@currentuser %>" data-container="body" type="button" data-html="true" href="#" id="login">Welcome,&nbsp <%= @currentuser %>!</a>
-					<div id="popover-content" class="hide">
-						<form class="form-inline" role="form">
-							<div class="form-group">
-								<p><%= @record.email%></p>
-								<%= link_to ('Update Info'),{:action=>'update',:id=>@id}, class: "btn btn-primary"%>
-								 
-								<button a href="index.html" class="btn btn-primary">Sign out</button>                                  
-							</div>
-						</form>
-					</div>
+			<!-- Popover -->
+			<a data-placement="bottom" data-title="<%=@currentuser %>" data-container="body" type="button" data-html="true" href="#" id="login">Welcome,&nbsp <%= @currentuser %>!</a>
 			
 			</li>
             
@@ -292,19 +290,12 @@
 					 						
 					<div id="cell">
 					<div class="content"><h4 class="panel-title">
-					  <a data-toggle="collapse" href="#collapse3">FORUM</a>
+					  <%= link_to ('CHAT ROOM'),{:action=>'help',:id=>@id}%>
+					<!-- Need to change the link to chat room!!!  by Gan Fang -->
+					  
 					</h4></div></div>
 				  </div>
-				  <div id="collapse3" class="panel-collapse collapse">
-					<ul class="list-group">
-					  <li class="list-group-item">
-						One
-					  </li>
-					  <li class="list-group-item">Two</li>
-					  <li class="list-group-item">Three</li>
-					</ul>
-					<div class="panel-footer">Footer</div>
-				  </div>
+				  
 				</div>
 			  </div>
 			  
@@ -342,31 +333,26 @@
 				  </div>
 				</div>
 			  </div>
-			  
-			  
-			  <div class="panel-group">
+
+
+			<div class="panel-group">
 				<div class="panel panel-default">
 				  <div class="panel-heading">
- 					<%= image_tag("survey_logo.png", :size=>"50x50") %>
+					<%= image_tag("survey_logo.png", :size=>"50x50") %> 						
 					<div id="cell">
 					<div class="content"><h4 class="panel-title">
-					  <a data-toggle="collapse" href="#collapse6">SURVEY</a>
+					  <a data-toggle="collapse" href="#collapse6">UPDATE</a>
 					</h4></div></div>
 				  </div>
 				  <div id="collapse6" class="panel-collapse collapse">
 					<ul class="list-group">
-					  <li class="list-group-item"><a href="#"><%= image_tag("1star.png", :size=>"60x20")%></a></li>
-					  <li class="list-group-item"><a href="#"><%= image_tag("2star.png", :size=>"60x20")%></a></li>
-					  <li class="list-group-item"><a href="#"><%= image_tag("3star.png", :size=>"60x20")%></a></li>
-					  <li class="list-group-item"><a href="#"><%= image_tag("4star.png", :size=>"60x20")%></a></li>
-					  <li class="list-group-item"><a href="#"><%= image_tag("5star.png", :size=>"60x20")%></a></li>
+					  <li class="list-group-item">
+						<%= link_to ('Update Info'),{:action=>'update',:id=>@id}%></li>					  <li class="list-group-item"><%= link_to ('Change Password'),{:action=>'changepassword',:id=>@id}%></li>
 					</ul>
-					<div class="panel-footer">Thank you!</div>
 				  </div>
 				</div>
 			  </div>
-			  
-			  
+
 			  
      
           </div><!--/row-->
@@ -382,14 +368,24 @@
 	  
 	  
       <hr>
-	
-	<footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    </footer>
 
     </div><!--/.container-->
 
+	<div id = "bot">
+	<a href="http://medicine.osu.edu"><%= image_tag("medicine_logo.png", :class => "pull-right")%></a>
+	
+	<p>The Ohio State University
+	School of Health and Rehabilitation Sciences
+	Division of Occupational Therapy</p>
+	<p>Atwell Hall, 453 West Tenth Avenue, Columbus, Ohio 43210</p>
+	<p>Phone: 614-292-5490</p>
+	<p>Fax: (614) 292-0210</p>
+	
+	</div>
+
+
+	
+	
 
          <script src="../../assets/javascripts/jquery-1.12.0.min.js"></script>
     <script src="../../assets/javascripts/bootstrap.min.js"></script>

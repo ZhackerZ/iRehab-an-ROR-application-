@@ -75,6 +75,14 @@
 			background-color: #eee;
 			padding: 20px;
 		}
+
+		#bot{
+			background-color: #81D3FF;
+			height: 150px;
+			padding: 20px;
+			padding-right:50px;
+			padding-left:100px;
+		}
 	
 	</style>
   </head>
@@ -125,7 +133,7 @@
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
 		  
-          <div class="jumbotron">
+          <!--<div class="jumbotron">-->
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
       
       <ol class="carousel-indicators">
@@ -137,34 +145,34 @@
       <div class="carousel-inner" role="listbox">
 	  
         <div class="item active">
-	  <%= image_tag("Video.jpg") %>
+	  <%= image_tag("video-conference-illustration-video-call-vector-flat-design-57467105.jpg") %>
           <div class="container">
             <div class="carousel-caption">
               <h1>Remote Medicare</h1>
               <p>Get direct and precise help when sitting at home</p>
-              <p><a class="btn btn-lg btn-primary" href="registration.html" role="button">Sign up today</a></p>
+              <!--<p><a class="btn btn-lg btn-primary" href="registration.html" role="button">Sign up today</a></p>-->
             </div>
           </div>
         </div>
 		
         <div class="item">
-	  <%= image_tag("calschedule.jpg") %>
+	  <%= image_tag("calendar-appointment-thumbtack-concept-busy-meeting-reminder-51239796.jpg") %>
           <div class="container">
             <div class="carousel-caption">
               <h1>Schedule System</h1>
-              <p>Get your reservation in no time</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              <p>Check your reservation in no time</p>
+              <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>-->
             </div>
           </div>
         </div>
 		
         <div class="item">
-          <%= image_tag("team.jpg") %>
+          <%= image_tag("happy-medical-staff-4671497.jpg") %>
           <div class="container">
             <div class="carousel-caption">
               <h1>Best Supporting Group</h1>
-              <p>Teams with best doctors will back you up via iRehab</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              <p>Teams with best doctors will back you up</p>
+              <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>-->
             </div>
           </div>
         </div>
@@ -182,7 +190,7 @@
       </a>
 	  
     </div>
-          </div>
+          <!--</div>-->
 		  
 		  
 		  
@@ -203,15 +211,23 @@
           <%= image_tag("webex_logo.jpeg",  :size=>"140x140") %>
           <h2>WebEx</h2>
           <p>WebEx is advanced multi-party video conference system.</p>
+
+
 	  
-          <p><a class="btn btn-default" role="button" data-placement="bottom" data-toggle="popover" data-title="WebEx" data-container="body" type="button" data-html="true" href="#popover-content" id="login">View details &raquo;</a></p>
-					<div id="popover-content" class="hide">
-						<form class="form-inline" role="form">
+          <div class="panel-group">
+				<div>
+				  
+				  <p><a class="btn btn-default" data-toggle="collapse" href="#collapse2" role="button">View details &raquo;</a></p>
+		  <div id="collapse2" class="panel-collapse collapse">
+					<form class="form-inline" role="form">
 							<div class="form-group">
 								<p>WebEx lets you have online meetings with anyone who has an Internet connection – including mobile users. You will be connected via audio and you can share content from your computer which lets you see the same things at the same time – like PowerPoint files, Word documents or even browse the web together. Within the meeting, you can “Pass the Ball” so any attendee can control the meeting and share.</p>                             
 							</div>
 						</form>
-					</div>
+				  </div>
+				  
+				</div>
+			  </div>
         </div>
 	
         <div class="col-lg-4">
@@ -219,17 +235,20 @@
           <h2>Calendar</h2>
           <p> iRehab helps you to schedule an appointment with your doctor in the most convenient way.</p>
           
-		  <p><a class="btn btn-default" role="button" data-placement="bottom" data-toggle="popover2" data-title="Calendar" data-container="body" type="button" data-html="true" href="#popover-content2" id="login">View details &raquo;</a></p>
-					<div id="popover-content2" class="hide">
-						<form class="form-inline" role="form">
+		  <div class="panel-group">
+				<div>
+				  
+				  <p><a class="btn btn-default" data-toggle="collapse" href="#collapse3" role="button">View details &raquo;</a></p>
+		  <div id="collapse3" class="panel-collapse collapse">
+					<form class="form-inline" role="form">
 							<div class="form-group">
-								<p>With Google's free online calendar, it's easy to keep track of life's important events all in one place.</p>                             
+								<p>With Google's free online calendar, it's easy to keep track of life's important events all in one place.</p>                              
 							</div>
 						</form>
-					</div>
-		  
-		  
-		  
+				  </div>
+				  
+				</div>
+			  </div>
 		  
         </div>
 		
@@ -238,15 +257,20 @@
           <h2>Supporting Group</h2>
           <p>iRehab can link you to the most appropriate helper in the shortest time, enhance your opportunity to get help from professional teams.</p>
 	<!-- modify -->
-		  <p><a class="btn btn-default" role="button" data-placement="bottom" data-toggle="popover1" data-title="Support Group" data-container="body" type="button" data-html="true" href="#popover-content1" id="login">View details &raquo;</a></p>
-					<div id="popover-content1" class="hide">
-						<form class="form-inline" role="form">
+		  <div class="panel-group">
+				<div>
+				  
+				  <p><a class="btn btn-default" data-toggle="collapse" href="#collapse4" role="button">View details &raquo;</a></p>
+		  <div id="collapse4" class="panel-collapse collapse">
+					<form class="form-inline" role="form">
 							<div class="form-group">
 								<p>Our experts teams are always ready to help you with any conditions and requests. </p>                             
 							</div>
 						</form>
-					</div>
-	        
+				  </div>
+				  
+				</div>
+			  </div>
 	</div>
 		
       </div>
@@ -277,8 +301,14 @@
 		
       </form>
 
-  
-		  
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+  	<button class="btn btn-lg btn-success btn-block"onClick="window.open('chatroom.html');" TARGET="_blank">Enter Chat Room</button>
+	
 		  
         </div><!--/.sidebar-offcanvas-->
       </div><!--/row-->
@@ -292,13 +322,22 @@
 	  
 	  
       <hr>
-	
-	<footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    </footer>
 
     </div><!--/.container-->
+
+	<div id = "bot">
+	<a href="http://medicine.osu.edu"><%= image_tag("medicine_logo.png", :class => "pull-right")%></a>
+	
+	<p>The Ohio State University
+	School of Health and Rehabilitation Sciences
+	Division of Occupational Therapy</p>
+	<p>Atwell Hall, 453 West Tenth Avenue, Columbus, Ohio 43210</p>
+	<p>Phone: 614-292-5490</p>
+	<p>Fax: (614) 292-0210</p>
+	
+	</div>
+
+
 
 
     <script src="../../assets/javascripts/jquery-1.12.0.min.js"></script>
@@ -343,6 +382,16 @@
 				}
 			});   
 		});
+	</script>
+
+	<script>
+		$(document).ready(function() {
+		  $('.has-tooltip').tooltip();
+		  $('.has-popover').popover({
+		    trigger: 'hover'
+		  });
+		});
+
 	</script>
 	
 	<!--<script>

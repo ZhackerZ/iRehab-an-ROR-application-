@@ -158,7 +158,7 @@
             <h1>Your question has been submitted, thanks!</h1>
          	<%@newquestion=Faq.new%>
 		<%@newquestion.question=@question%>
-		<%#@newquestion.save%>
+		<%@newquestion.save%>
           </div>
 		  
         </div><!--/.col-xs-12.col-sm-9-->
