@@ -290,9 +290,7 @@
 					 						
 					<div id="cell">
 					<div class="content"><h4 class="panel-title">
-					  <%= link_to ('CHAT ROOM'),{:action=>'help',:id=>@id}%>
-					<!-- Need to change the link to chat room!!!  by Gan Fang -->
-					  
+					  <a href="chatroom.html" TARGET="_blank">Chat Room</a>  
 					</h4></div></div>
 				  </div>
 				  
