@@ -127,12 +127,12 @@
 <tr><td>State: <%= @state %></tr></td>
 <tr><td>Zipcode: <%= @zipcode %></tr></td>
 <tr><td>Phone Number: <%= @phone %></tr></td>
-
+<div>
 <tr><td>
 <% users = User.where(:username => @username).first %>
 <% if users %>
 <font color="red">
- Sorry, this username has been registered.
+ Sorry, this username has been registered.<tr>
 </font>
 <% else %>
 <%=link_to ('Save'), {
@@ -153,7 +153,7 @@
  },class: "tn btn-lg btn-primary"%>
 <% end %>
 </td></div>
-<div class="div-inline"><tr><td>
+<div class="div-inline"><td>
 <input type="button" value="Cancel" onClick="window.location.href='registration.html';" class="tn btn-lg btn-primary"/>
 </td></tr>
 
