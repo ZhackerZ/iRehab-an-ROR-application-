@@ -167,12 +167,12 @@
 				<div class="panel-heading">
 				  <h4 class="panel-title">
 					<a data-toggle="collapse" data-parent="#accordion" 
-					  href="#collapse<%=qa.id%>"><!-- There's one thing maybe very hard to handle: The href must points to the hidden box which belongs to this question itself. -->
+					  href="#collapse1<%=qa.id%>"><!-- There's one thing maybe very hard to handle: The href must points to the hidden box which belongs to this question itself. -->
 					  <%=qa.question%>
 					</a><!-- Use the style of "id + Question Body" 04/18 -->
 				  </h4>
 				</div>
-				<div id="collapse<%=qa.id%>" class="panel-collapse collapse">
+				<div id="collapse1<%=qa.id%>" class="panel-collapse collapse">
 				  <div class="panel-body">
 					<p><%=qa.answer%></p>
 					<!-- Directly read the answers from DB 04/18 -->

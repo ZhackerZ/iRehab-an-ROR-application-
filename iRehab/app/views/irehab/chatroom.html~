@@ -34,8 +34,9 @@
 			box-shadow: 0 0 5px 3px #0000FF;
 			color: #666;
 			width: 150px;
-			height: 20px;
+			height: 40px;
 			outline: none;
+			font:12px;
 			opacity:0.8;
 			position:relative;
 			top:-5px;
@@ -47,6 +48,7 @@
 			left: 40%;
 			opacity:0.8;
 		    color:black;
+		    font: 12px;
 		    text-shadow: 0 0 10px #fff,
 			             0 0 20px #fff,
 			             0 0 30px #fff,
@@ -69,7 +71,7 @@
 
 		#bottomPanel{
 		    height: 100px;
-		    background:#0000FF;
+		    background:#E6E6FA;
 		    position:absolute;
 		    bottom:0px;
 		    left:0px;
@@ -97,7 +99,7 @@
 		#nickname{
 		    display: none;
 		    background: white;
-		    color: #FFF;
+		    color: #E6E6FA;
 		    opacity:0.8;
 		    top:110px;
 		    left:0px;
@@ -109,7 +111,7 @@
 	    .circle {
 		    width: 100px;
 		    height: 100px;
-		    background: #0000FF;
+		    background: #E6E6FA;
 		    border-radius: 200px;
 		    margin: 0 auto;
 		    opacity:0.8;
@@ -132,7 +134,7 @@
 	<div class="circle">
 		<a href="#" class="circleText" id="toggle"><p class="promptCircle">Your Name</p>
 			<div id="nickname">
-				<h1 class="nicknamePropmt">Hello, <input id="userId" class="nicknameTextBox" placeholder="your-name-here"/></h1>
+				<h1 class="nicknamePropmt">Hello, <input id="userId" font="9px" class="nicknameTextBox" placeholder="your-name-here"/></h1>
 			</div>
 		</a>
 	</div>

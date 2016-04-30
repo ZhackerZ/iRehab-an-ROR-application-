@@ -179,6 +179,7 @@
 					  
 						<li>firstname: <%=@record.firstname %></li>
 						<li>lastname: <%=@record.lastname %></li>
+						<li>email: <%=@record.email %></li>
 						<li>birthday: <%=@record.dateofbirth %></li>
 						<li>gender: <%=@record.gender%></li>
 						<li>address:<%= @record.addressline %>,<%= @record.city %>,<%= @record.state %>,<%= @record.zipcode%></li>
